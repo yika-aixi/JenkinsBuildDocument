@@ -1,0 +1,147 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Docs for schema item AndroidAndIOS in JenkinsBuildDocument</title>
+      <!-- saved from url=(0014)about:internet -->
+      <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
+      <link rel="stylesheet" type="text/css" href="styles/site.css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+         <!--
+                            EnsureInFrame('Element', 'androidandios');
+                        --></script><div class="pageheader">
+         Documentation for JenkinsBuildDocument
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Definition Type:</b></td>
+               <td>Element</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Name:</b></td>
+               <td>AndroidAndIOS</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Containing Schema:</b></td>
+               <td><a href="commonelement_xsd.html">CommonElement.xsd</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Abstract</b></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdDiagram" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Diagram:</b> 
+               </td>
+            </tr>
+            <tr id="xsdDiagram_body_id">
+               <td><map name="DiagramMap" id="DiagramMap">
+                     <area shape="rect" coords="214,256,443,281" href="muteotheraudiosources.html" alt="Drilldown into MuteOtherAudioSources"></area>
+                     <area shape="rect" coords="214,224,441,249" href="disabledepthandstencil.html" alt="Drilldown into DisableDepthAndStencil"></area>
+                     <area shape="rect" coords="214,192,390,217" href="landscapeleft.html" alt="Drilldown into LandscapeLeft"></area>
+                     <area shape="rect" coords="214,160,398,185" href="landscaperight.html" alt="Drilldown into LandscapeRight"></area>
+                     <area shape="rect" coords="214,128,419,153" href="portraitupsidedown.html" alt="Drilldown into PortraitUpsideDown"></area>
+                     <area shape="rect" coords="214,96,356,121" href="portrait.html" alt="Drilldown into Portrait"></area>
+                     <area shape="rect" coords="214,1,465,89" href="defaultorientation.html" alt="Drilldown into DefaultOrientation"></area></map><img src="images/androidandios.png" border="0" alt="XSD Diagram of AndroidAndIOS" usemap="#DiagramMap"></img></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>&lt;xsd:element name="AndroidAndIOS"&gt;
+    &lt;xsd:complexType&gt;
+        &lt;xsd:all&gt;
+            &lt;xsd:element name="DefaultOrientation" type="UIOrientationEnum" minOccurs="0"&gt;
+                &lt;xsd:annotation&gt;
+                    &lt;xsd:appinfo&gt;屏幕方向&lt;/xsd:appinfo&gt;
+                &lt;/xsd:annotation&gt;
+            &lt;/xsd:element&gt;
+            &lt;xsd:element name="Portrait" type="xsd:boolean" minOccurs="0" /&gt;
+            &lt;xsd:element name="PortraitUpsideDown" type="xsd:boolean" minOccurs="0" /&gt;
+            &lt;xsd:element name="LandscapeRight" type="xsd:boolean" minOccurs="0" /&gt;
+            &lt;xsd:element name="LandscapeLeft" type="xsd:boolean" minOccurs="0" /&gt;
+            &lt;xsd:element name="DisableDepthAndStencil" type="xsd:boolean" minOccurs="0" /&gt;
+            &lt;xsd:element name="MuteOtherAudioSources" type="xsd:boolean" minOccurs="0" /&gt;
+        &lt;/xsd:all&gt;
+    &lt;/xsd:complexType&gt;
+&lt;/xsd:element&gt;</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="childElements" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Child Elements:</b></td>
+            </tr>
+            <tr id="childElements_body_id">
+               <td width="120px;"></td>
+               <td class="childTableHolder">
+                  <table class="childTable">
+                     <tr class="header">
+                        <td class="label first">Name</td>
+                        <td>Type</td>
+                        <td class="mid">Min Occurs</td>
+                        <td class="last">Max Occurs</td>
+                     </tr>
+                     <tr>
+                        <td class="first">DefaultOrientation</td>
+                        <td><a href="defaultorientation.html">DefaultOrientation</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">Portrait</td>
+                        <td><a href="portrait.html">Portrait</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">PortraitUpsideDown</td>
+                        <td><a href="portraitupsidedown.html">PortraitUpsideDown</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">LandscapeRight</td>
+                        <td><a href="landscaperight.html">LandscapeRight</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">LandscapeLeft</td>
+                        <td><a href="landscapeleft.html">LandscapeLeft</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">DisableDepthAndStencil</td>
+                        <td><a href="disabledepthandstencil.html">DisableDepthAndStencil</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">MuteOtherAudioSources</td>
+                        <td><a href="muteotheraudiosources.html">MuteOtherAudioSources</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter">
+         			Documentation for JenkinsBuildDocument<br/>
+         Generated using 
+         <a href="https://www.liquid-technologies.com/" rel="nofollow">Liquid Studio 2017 - Developer Bundle Edition (Trial) 15.1.15.7745</a></div>
+   </body>
+</html>

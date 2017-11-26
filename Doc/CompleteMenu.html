@@ -1,0 +1,113 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>XML Schema Documenatation Menu</title>
+      <!-- saved from url=(0014)about:internet --><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="searchindex.js"></script><link href="styles/site.css" rel="stylesheet" type="text/css"></link><script type="text/javascript">
+         <!--
+            $(document).ready(function () {
+                setTabs();
+            });
+    
+        	var filenames = null;
+        	var keywordIndex = null;
+
+        	function getSearchJS(searchBoxID, ulResults) 
+            {
+        		if (filenames == null) {
+        		    filenames = CreateFileRefs();
+        		}
+        		if (keywordIndex == null) {
+        		    keywordIndex = CreateWordIndex();
+        		}
+
+        		var data = '';
+        		var searchText = $("#" + searchBoxID).attr("value");
+        		var searchTerms = searchText.split(' ');
+        		var fileIndexResults = new Array();
+
+        		for (var sti = 0; sti < searchTerms.length; sti++) {
+        		    var searchTerm = trim(searchTerms[sti]).toLowerCase();
+
+        		    for (var i = 0; i < keywordIndex.length; i++) {
+        		        if (keywordIndex[i][0].indexOf(searchTerm) != -1) {
+        		            fileIndexResults = fileIndexResults.concat(keywordIndex[i][1]);
+        		        }
+        		    }
+        		}
+
+        		fileIndexResults = unique(fileIndexResults);
+        		for (var ri = 0; ri < fileIndexResults.length; ri++) {
+        		    var resultOffset = fileIndexResults[ri];
+        		    data += "<li><a href='" + filenames[resultOffset][1] + "' target='ContentFrame'>" + filenames[resultOffset][0] + "</a></li>";
+        		}
+
+        		if (data == '')
+        		    data = "<li>No Results</li>";
+
+        		$("#" + ulResults).html(data);
+        	}
+                        --></script></head>
+   <body>
+      <form action="CompleteMenu.html">
+         <ul class="tabs">
+            <li><a href="#tab1">Index</a></li>
+            <li><a href="#tab2">Search</a></li>
+         </ul>
+         <div class="tab_container">
+            <div id="tab1" class="tab_content">
+               <div>
+                  <ul id="ulMenu" class="treeview">
+                     <li id="Schema" class="parent"><a href="javascript:toggleNode('Schema')"><img height="11" width="11" src="images/plus.gif"></img>Schema</a><ul style="display:none" expanded="false" loaded="true">
+                           <li id="buildinfo_xsd"><a href="buildinfo_xsd.html" target="ContentFrame">BuildInfo.xsd</a></li>
+                           <li id="commonelement_xsd"><a href="commonelement_xsd.html" target="ContentFrame">CommonElement.xsd</a></li>
+                        </ul>
+                     </li>
+                     <li id="Element" class="parent"><a href="javascript:toggleNode('Element')"><img height="11" width="11" src="images/plus.gif"></img>Element</a><ul style="display:none" expanded="false" loaded="true">
+                           <li id="androidandios"><a href="androidandios.html" target="ContentFrame">AndroidAndIOS</a></li>
+                           <li id="buildinfo"><a href="buildinfo.html" target="ContentFrame">BuildInfo</a></li>
+                           <li id="icon"><a href="icon.html" target="ContentFrame">Icon</a></li>
+                           <li id="pcandios"><a href="pcandios.html" target="ContentFrame">PCAndIOS</a></li>
+                        </ul>
+                     </li>
+                     <li id="SimpleType" class="parent"><a href="javascript:toggleNode('SimpleType')"><img height="11" width="11" src="images/plus.gif"></img>SimpleType</a><ul style="display:none" expanded="false" loaded="true">
+                           <li id="androidbuildsystemenum"><a href="androidbuildsystemenum.html" target="ContentFrame">AndroidBuildSystemEnum</a></li>
+                           <li id="androidetc2fallbackenum"><a href="androidetc2fallbackenum.html" target="ContentFrame">AndroidETC2FallbackEnum</a></li>
+                           <li id="androidpreferredinstalllocationenum"><a href="androidpreferredinstalllocationenum.html" target="ContentFrame">AndroidPreferredInstallLocationEnum</a></li>
+                           <li id="androidshowactivityindicatoronloadingenum"><a href="androidshowactivityindicatoronloadingenum.html" target="ContentFrame">AndroidShowActivityIndicatorOnLoadingEnum</a></li>
+                           <li id="androidtargetdeviceenum"><a href="androidtargetdeviceenum.html" target="ContentFrame">AndroidTargetDeviceEnum</a></li>
+                           <li id="apicompatibilitylevelenum"><a href="apicompatibilitylevelenum.html" target="ContentFrame">ApiCompatibilityLevelEnum</a></li>
+                           <li id="aspectratioenum"><a href="aspectratioenum.html" target="ContentFrame">AspectRatioEnum</a></li>
+                           <li id="colorspaceenum"><a href="colorspaceenum.html" target="ContentFrame">ColorSpaceEnum</a></li>
+                           <li id="d3d11fullscreenmodeenum"><a href="d3d11fullscreenmodeenum.html" target="ContentFrame">D3D11FullscreenModeEnum</a></li>
+                           <li id="d3d9fullscreenmodeenum"><a href="d3d9fullscreenmodeenum.html" target="ContentFrame">D3D9FullscreenModeEnum</a></li>
+                           <li id="iosappinbackgroundbehaviorenum"><a href="iosappinbackgroundbehaviorenum.html" target="ContentFrame">IOSAppInBackgroundBehaviorEnum</a></li>
+                           <li id="iossdkversionenum"><a href="iossdkversionenum.html" target="ContentFrame">IOSSdkVersionEnum</a></li>
+                           <li id="iosshowactivityindicatoronloadingenum"><a href="iosshowactivityindicatoronloadingenum.html" target="ContentFrame">IOSShowActivityIndicatorOnLoadingEnum</a></li>
+                           <li id="iosstatusbarstyleenum"><a href="iosstatusbarstyleenum.html" target="ContentFrame">IOSStatusBarStyleEnum</a></li>
+                           <li id="iostargetdeviceenum"><a href="iostargetdeviceenum.html" target="ContentFrame">IOSTargetDeviceEnum</a></li>
+                           <li id="iosversion"><a href="iosversion.html" target="ContentFrame">IOSVersion</a></li>
+                           <li id="imagepath"><a href="imagepath.html" target="ContentFrame">ImagePath</a></li>
+                           <li id="logtypeenum"><a href="logtypeenum.html" target="ContentFrame">LogTypeEnum</a></li>
+                           <li id="macfullscreenmodeenum"><a href="macfullscreenmodeenum.html" target="ContentFrame">MacFullscreenModeEnum</a></li>
+                           <li id="mobiletexturesubtargetenum"><a href="mobiletexturesubtargetenum.html" target="ContentFrame">MobileTextureSubtargetEnum</a></li>
+                           <li id="packoutpath"><a href="packoutpath.html" target="ContentFrame">PackOutPath</a></li>
+                           <li id="resolutiondialogsettingenum"><a href="resolutiondialogsettingenum.html" target="ContentFrame">ResolutionDialogSettingEnum</a></li>
+                           <li id="scencepath"><a href="scencepath.html" target="ContentFrame">ScencePath</a></li>
+                           <li id="scriptingimplementationenum"><a href="scriptingimplementationenum.html" target="ContentFrame">ScriptingImplementationEnum</a></li>
+                           <li id="stacktracelogtypeenum"><a href="stacktracelogtypeenum.html" target="ContentFrame">StackTraceLogTypeEnum</a></li>
+                           <li id="strippinglevelenum"><a href="strippinglevelenum.html" target="ContentFrame">StrippingLevelEnum</a></li>
+                           <li id="uiorientationenum"><a href="uiorientationenum.html" target="ContentFrame">UIOrientationEnum</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div id="tab2" class="tab_content"><input type="text" id="txtSearch"></input><input type="button" id="cmdSearch" value="Search" onclick="getSearchJS('txtSearch','ulSearch');"></input><div style="margin-top:10px;">
+                  <ul id="ulSearch" class="search"></ul>
+               </div>
+            </div>
+         </div>
+      </form>
+   </body>
+</html>

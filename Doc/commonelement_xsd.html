@@ -1,0 +1,354 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Docs the schema CommonElement.xsd in JenkinsBuildDocument</title>
+      <!-- saved from url=(0014)about:internet -->
+      <meta http-equiv="content-type" content="text/html;charset=utf-8"></meta>
+      <link href="styles/site.css" rel="stylesheet" type="text/css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+         <!--
+                            EnsureInFrame('Schema', 'commonelement_xsd');
+                        --></script><div class="pageheader">
+         Documentation for JenkinsBuildDocument
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Schema Name:</b></td>
+               <td>CommonElement.xsd</td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>
+&lt;!--Created with Liquid Studio 2017 - Developer Bundle Edition (Trial) 15.1.15.7745 (https://www.liquid-technologies.com)--&gt;
+&lt;xsd:schema elementFormDefault="qualified" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+    &lt;!--Api 兼容等级 枚举--&gt;
+    &lt;xsd:simpleType name="ApiCompatibilityLevelEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="NET_2_0" /&gt;
+            &lt;xsd:enumeration value="NET_2_0_Subset" /&gt;
+            &lt;xsd:enumeration value="NET_4_6" /&gt;
+            &lt;xsd:enumeration value="NET_Web" /&gt;
+            &lt;xsd:enumeration value="NET_Micro" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;!--脚本运行环境 枚举--&gt;
+    &lt;xsd:simpleType name="ScriptingImplementationEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="Mono2x" /&gt;
+            &lt;xsd:enumeration value="IL2CPP" /&gt;
+            &lt;xsd:enumeration value="WinRTDotNET" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;!--安卓设备架构 枚举--&gt;
+    &lt;xsd:simpleType name="AndroidTargetDeviceEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="FAT" /&gt;
+            &lt;xsd:enumeration value="ARMv7" /&gt;
+            &lt;xsd:enumeration value="x86" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;!--IOS设备架构 枚举--&gt;
+    &lt;xsd:simpleType name="IOSTargetDeviceEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="iPhoneOnly" /&gt;
+            &lt;xsd:enumeration value="iPadOnly" /&gt;
+            &lt;xsd:enumeration value="iPhoneAndiPad" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;!--安卓打包系统 枚举--&gt;
+    &lt;xsd:simpleType name="AndroidBuildSystemEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="Internal" /&gt;
+            &lt;xsd:enumeration value="Gradle" /&gt;
+            &lt;xsd:enumeration value="ADT" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;!--安卓打包系统 枚举--&gt;
+    &lt;xsd:simpleType name="MobileTextureSubtargetEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="Generic" /&gt;
+            &lt;xsd:enumeration value="DXT" /&gt;
+            &lt;xsd:enumeration value="PVRTC" /&gt;
+            &lt;xsd:enumeration value="ATC" /&gt;
+            &lt;xsd:enumeration value="ETC" /&gt;
+            &lt;xsd:enumeration value="ETC2" /&gt;
+            &lt;xsd:enumeration value="ASTC" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;!--场景路径约束--&gt;
+    &lt;xsd:simpleType name="ScencePath"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:pattern value="(([^/|\\|:|\*|\?|\&amp;quot;|\&amp;lt;|\&amp;gt;|\|]):(\\|/))?(([^/|\\|:|\*|\?|\&amp;quot;|\&amp;lt;|\&amp;gt;|\|])*(\\|/))*([^/|\\|:|\*|\?|\&amp;quot;|\&amp;lt;|\&amp;gt;|\|])+\.unity" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;!--Image路径约束--&gt;
+    &lt;xsd:simpleType name="ImagePath"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:pattern value="(Assets(\\|/))(([^/|\\|:|\*|\?|\&amp;quot;|\&amp;lt;|\&amp;gt;|\|])*(\\|/))*([^/|\\|:|\*|\?|\&amp;quot;|\&amp;lt;|\&amp;gt;|\|])+(\.(jpg|png))" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;!--输出路径约束--&gt;
+    &lt;xsd:simpleType name="PackOutPath"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:pattern value="(([^/|\\|:|\*|\?|\&amp;quot;|\&amp;lt;|\&amp;gt;|\|]):(\\|/))?(([^/|\\|:|\*|\?|\&amp;quot;|\&amp;lt;|\&amp;gt;|\|])*(\\|/))*([^/|\\|:|\*|\?|\&amp;quot;|\&amp;lt;|\&amp;gt;|\|])+\.apk|(([^/|\\|:|\*|\?|\&amp;quot;|\&amp;lt;|\&amp;gt;|\|]):(\\|/))?(([^/|\\|:|\*|\?|\&amp;quot;|\&amp;lt;|\&amp;gt;|\|])*(\\|/))*([^/|\\|:|\*|\?|\&amp;quot;|\&amp;lt;|\&amp;gt;|\|])+\.exe|(([^/|\\|:|\*|\?|\&amp;quot;|\&amp;lt;|\&amp;gt;|\|]):(\\|/))?(([^/|\\|:|\*|\?|\&amp;quot;|\&amp;lt;|\&amp;gt;|\|])*(\\|/))*([^/|\\|:|\*|\?|\&amp;quot;|\&amp;lt;|\&amp;gt;|\|])*(([^/|\\|:|\*|\?|\&amp;quot;|\&amp;lt;|\&amp;gt;|\|])+([^\.\w]))" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;!--IOS版本约束--&gt;
+    &lt;xsd:simpleType name="IOSVersion"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:pattern value="(([7-9]|(1[0-9]))((\.([0-9][0-9]|[0-9]))+))" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;!--贴图解压模式 枚举--&gt;
+    &lt;xsd:simpleType name="AndroidETC2FallbackEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="Quality32Bit" /&gt;
+            &lt;xsd:enumeration value="Quality16Bit" /&gt;
+            &lt;xsd:enumeration value="Quality32BitDownscaled" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;!--旋转 枚举--&gt;
+    &lt;xsd:simpleType name="UIOrientationEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="Portrait" /&gt;
+            &lt;xsd:enumeration value="PortraitUpsideDown" /&gt;
+            &lt;xsd:enumeration value="LandscapeRight" /&gt;
+            &lt;xsd:enumeration value="LandscapeLeft" /&gt;
+            &lt;xsd:enumeration value="AutoRotation" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="IOSShowActivityIndicatorOnLoadingEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="DontShow" /&gt;
+            &lt;xsd:enumeration value="WhiteLarge" /&gt;
+            &lt;xsd:enumeration value="White" /&gt;
+            &lt;xsd:enumeration value="Gray" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="AndroidShowActivityIndicatorOnLoadingEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="DontShow" /&gt;
+            &lt;xsd:enumeration value="Large" /&gt;
+            &lt;xsd:enumeration value="InversedLarge" /&gt;
+            &lt;xsd:enumeration value="Small" /&gt;
+            &lt;xsd:enumeration value="InversedSmall" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="ResolutionDialogSettingEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="Disabled" /&gt;
+            &lt;xsd:enumeration value="Enabled" /&gt;
+            &lt;xsd:enumeration value="HiddenByDefault" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="MacFullscreenModeEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="CaptureDisplay" /&gt;
+            &lt;xsd:enumeration value="FullscreenWindow" /&gt;
+            &lt;xsd:enumeration value="FullscreenWindowWithDockAndMenuBar" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="D3D9FullscreenModeEnum"&gt;
+        &lt;xsd:annotation&gt;
+            &lt;xsd:appinfo&gt;d3d9的支持已被移除在2017.3.09中&lt;/xsd:appinfo&gt;
+            &lt;xsd:documentation&gt;d3d9的支持已被移除在2017.3.09中v&lt;/xsd:documentation&gt;
+        &lt;/xsd:annotation&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="ExclusiveMode" /&gt;
+            &lt;xsd:enumeration value="FullscreenWindow" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="D3D11FullscreenModeEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="ExclusiveMode" /&gt;
+            &lt;xsd:enumeration value="FullscreenWindow" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="IOSStatusBarStyleEnum"&gt;
+        &lt;xsd:annotation&gt;
+            &lt;xsd:documentation&gt;在2017.3中:
+	BlackTranslucentv
+	BlackOpaquev
+变为了:
+	LightContentv&lt;/xsd:documentation&gt;
+        &lt;/xsd:annotation&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="BlackTranslucent" /&gt;
+            &lt;xsd:enumeration value="BlackOpaque" /&gt;
+            &lt;xsd:enumeration value="Default" /&gt;
+            &lt;xsd:enumeration value="LightContent" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="IOSSdkVersionEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="DeviceSDK" /&gt;
+            &lt;xsd:enumeration value="SimulatorSDK" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="IOSAppInBackgroundBehaviorEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="Custom" /&gt;
+            &lt;xsd:enumeration value="Suspend" /&gt;
+            &lt;xsd:enumeration value="Exit" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="AndroidPreferredInstallLocationEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="Auto" /&gt;
+            &lt;xsd:enumeration value="PreferExternal" /&gt;
+            &lt;xsd:enumeration value="ForceInternal" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="ColorSpaceEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="Uninitialized" /&gt;
+            &lt;xsd:enumeration value="Gamma" /&gt;
+            &lt;xsd:enumeration value="Linear" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="StrippingLevelEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="Disabled" /&gt;
+            &lt;xsd:enumeration value="StripAssemblies" /&gt;
+            &lt;xsd:enumeration value="StripByteCode" /&gt;
+            &lt;xsd:enumeration value="UseMicroMSCorlib" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="StackTraceLogTypeEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="None" /&gt;
+            &lt;xsd:enumeration value="ScriptOnly" /&gt;
+            &lt;xsd:enumeration value="Full" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="AspectRatioEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="AspectOthers" /&gt;
+            &lt;xsd:enumeration value="Aspect4by3" /&gt;
+            &lt;xsd:enumeration value="Aspect5by4" /&gt;
+            &lt;xsd:enumeration value="Aspect16by10" /&gt;
+            &lt;xsd:enumeration value="Aspect16by9" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:simpleType name="LogTypeEnum"&gt;
+        &lt;xsd:restriction base="xsd:string"&gt;
+            &lt;xsd:enumeration value="Error" /&gt;
+            &lt;xsd:enumeration value="Assert" /&gt;
+            &lt;xsd:enumeration value="Warning" /&gt;
+            &lt;xsd:enumeration value="Log" /&gt;
+            &lt;xsd:enumeration value="Exception" /&gt;
+        &lt;/xsd:restriction&gt;
+    &lt;/xsd:simpleType&gt;
+    &lt;xsd:element name="Icon"&gt;
+        &lt;xsd:annotation&gt;
+            &lt;xsd:documentation&gt;目前只允许加载Assets目录下的图片&lt;/xsd:documentation&gt;
+        &lt;/xsd:annotation&gt;
+        &lt;xsd:complexType&gt;
+            &lt;xsd:simpleContent&gt;
+                &lt;xsd:extension base="ImagePath"&gt;
+                    &lt;xsd:attribute name="explain" type="xsd:string" use="optional" /&gt;
+                &lt;/xsd:extension&gt;
+            &lt;/xsd:simpleContent&gt;
+        &lt;/xsd:complexType&gt;
+    &lt;/xsd:element&gt;
+    &lt;xsd:element name="PCAndIOS"&gt;
+        &lt;xsd:complexType&gt;
+            &lt;xsd:all&gt;
+                &lt;xsd:element name="Build" type="xsd:int" minOccurs="0" /&gt;
+            &lt;/xsd:all&gt;
+        &lt;/xsd:complexType&gt;
+    &lt;/xsd:element&gt;
+    &lt;xsd:element name="AndroidAndIOS"&gt;
+        &lt;xsd:complexType&gt;
+            &lt;xsd:all&gt;
+                &lt;xsd:element name="DefaultOrientation" type="UIOrientationEnum" minOccurs="0"&gt;
+                    &lt;xsd:annotation&gt;
+                        &lt;xsd:appinfo&gt;屏幕方向&lt;/xsd:appinfo&gt;
+                    &lt;/xsd:annotation&gt;
+                &lt;/xsd:element&gt;
+                &lt;xsd:element name="Portrait" type="xsd:boolean" minOccurs="0" /&gt;
+                &lt;xsd:element name="PortraitUpsideDown" type="xsd:boolean" minOccurs="0" /&gt;
+                &lt;xsd:element name="LandscapeRight" type="xsd:boolean" minOccurs="0" /&gt;
+                &lt;xsd:element name="LandscapeLeft" type="xsd:boolean" minOccurs="0" /&gt;
+                &lt;xsd:element name="DisableDepthAndStencil" type="xsd:boolean" minOccurs="0" /&gt;
+                &lt;xsd:element name="MuteOtherAudioSources" type="xsd:boolean" minOccurs="0" /&gt;
+            &lt;/xsd:all&gt;
+        &lt;/xsd:complexType&gt;
+    &lt;/xsd:element&gt;
+&lt;/xsd:schema&gt;</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="Element" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Elements:</b></td>
+            </tr>
+            <tr id="Element_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul>
+                     <li><a href="androidandios.html">AndroidAndIOS</a></li>
+                     <li><a href="icon.html">Icon</a></li>
+                     <li><a href="pcandios.html">PCAndIOS</a></li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="SimpleType" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>SimpleTypes:</b></td>
+            </tr>
+            <tr id="SimpleType_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul>
+                     <li><a href="androidbuildsystemenum.html">AndroidBuildSystemEnum</a></li>
+                     <li><a href="androidetc2fallbackenum.html">AndroidETC2FallbackEnum</a></li>
+                     <li><a href="androidpreferredinstalllocationenum.html">AndroidPreferredInstallLocationEnum</a></li>
+                     <li><a href="androidshowactivityindicatoronloadingenum.html">AndroidShowActivityIndicatorOnLoadingEnum</a></li>
+                     <li><a href="androidtargetdeviceenum.html">AndroidTargetDeviceEnum</a></li>
+                     <li><a href="apicompatibilitylevelenum.html">ApiCompatibilityLevelEnum</a></li>
+                     <li><a href="aspectratioenum.html">AspectRatioEnum</a></li>
+                     <li><a href="colorspaceenum.html">ColorSpaceEnum</a></li>
+                     <li><a href="d3d11fullscreenmodeenum.html">D3D11FullscreenModeEnum</a></li>
+                     <li><a href="d3d9fullscreenmodeenum.html">D3D9FullscreenModeEnum</a></li>
+                     <li><a href="iosappinbackgroundbehaviorenum.html">IOSAppInBackgroundBehaviorEnum</a></li>
+                     <li><a href="iossdkversionenum.html">IOSSdkVersionEnum</a></li>
+                     <li><a href="iosshowactivityindicatoronloadingenum.html">IOSShowActivityIndicatorOnLoadingEnum</a></li>
+                     <li><a href="iosstatusbarstyleenum.html">IOSStatusBarStyleEnum</a></li>
+                     <li><a href="iostargetdeviceenum.html">IOSTargetDeviceEnum</a></li>
+                     <li><a href="iosversion.html">IOSVersion</a></li>
+                     <li><a href="imagepath.html">ImagePath</a></li>
+                     <li><a href="logtypeenum.html">LogTypeEnum</a></li>
+                     <li><a href="macfullscreenmodeenum.html">MacFullscreenModeEnum</a></li>
+                     <li><a href="mobiletexturesubtargetenum.html">MobileTextureSubtargetEnum</a></li>
+                     <li><a href="packoutpath.html">PackOutPath</a></li>
+                     <li><a href="resolutiondialogsettingenum.html">ResolutionDialogSettingEnum</a></li>
+                     <li><a href="scencepath.html">ScencePath</a></li>
+                     <li><a href="scriptingimplementationenum.html">ScriptingImplementationEnum</a></li>
+                     <li><a href="stacktracelogtypeenum.html">StackTraceLogTypeEnum</a></li>
+                     <li><a href="strippinglevelenum.html">StrippingLevelEnum</a></li>
+                     <li><a href="uiorientationenum.html">UIOrientationEnum</a></li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter">
+         			Documentation for JenkinsBuildDocument<br/>
+         Generated using 
+         <a href="https://www.liquid-technologies.com/">Liquid Studio 2017 - Developer Bundle Edition (Trial) 15.1.15.7745</a></div>
+   </body>
+</html>
